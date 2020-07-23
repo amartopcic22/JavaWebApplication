@@ -1,0 +1,121 @@
+body{
+    
+    background-image: url(images/room-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login{
+    position: absolute;
+    top:60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:400px;
+    height: 300px;
+    text-align: center;
+}
+.registration{
+    position: absolute;
+    top:0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:400px;
+    height: 350px;
+    text-align: center;
+}
+
+.button{
+    background-color: #01aed3;
+    width:100px;
+    padding-top:5px;
+    padding-bottom:5px;
+    color:white;
+    border-radius:4px;
+    border: #01aed3 1px solid;
+    margin-top:10px;
+    margin-bottom:20px;
+    float:left;
+    font-weight:800;
+    font-size:0.8em;
+    margin-left: 95px;
+}
+.button1{
+    background-color: #01aed3;
+    width:100px;
+    padding-top:8px;
+    padding-bottom:5px;
+    color:white;
+    border-radius:4px;
+    border: #01aed3 1px solid;
+    margin-top:10px;
+    margin-bottom:20px;
+    float:left;
+    font-weight:800;
+    font-size:0.8em;
+    margin-left: 5px;
+}
+.input{
+    background:#ecf0f1;
+    border: #ccc 1px solid;
+    border-bottom: #ccc 2px solid;
+    padding: 3px;
+    width:200px;
+    color:#000330;
+    margin-top:4px;
+    font-size:18px;
+    border-radius:4px;
+}
+.outputLabel{
+    font-size:18px;
+    color:antiquewhite;
+        padding-left: 13px;
+}
+.box{
+    /* background:#ff403331;*/
+    background:#116bd3;
+    width:250px;
+    border-radius:6px;
+    margin: 0 auto 0 auto;
+    padding:0px 70px 0px 0px;
+    border: #116bd3 4px solid; 
+}
+.box1{
+    /* background:#ff403331;*/
+    background:#273c75;
+    width:250px;
+    border-radius:6px;
+    margin: 0 auto 0 auto;
+    padding:0px 70px 0px 0px;
+    border: #273c75 4px solid; 
+}
+h1{
+    font-size:1.5em;
+    color:antiquewhite;
+    padding-left: 79px;
+
+}
+p{  
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size:15px;
+    text-decoration: none;
+    color:#000330;
+    text-align: center;
+}
+.signup{
+    color:#ffffff;
+    font-weight: 900;
+}
+h3{
+    font-size:1.5em;
+    color:antiquewhite;
+    padding-left: 79px;
+
+}
+.facet{
+    padding-left: 79px;
+}
+

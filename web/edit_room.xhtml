@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Edit Room</title>
+        <h:outputStylesheet library="css" name="home.css"/>
+    </h:head>
+    <h:body>
+         <h1>Hotel Reservation</h1>
+
+        <ul>
+        <li class="home"><a href="index.xhtml">HOME</a></li>
+        <li><a href="edit_room.xhtml">EDIT ROOM</a></li>
+        <li><a href="room_information_admin.xhtml">ROOM INFORMATION</a></li>
+        <li><a href="#about">LOGOUT</a></li>
+        </ul>
+
+        <div class="edit-dcontainer">
+        <h:form>
+        <h:panelGrid columns="1">
+            <h:outputLabel class="edit-label">Room Name</h:outputLabel>
+            <h:inputText class="edit-input" value="#{roomManagedBean.code}"  a:placeholder="Room name.."  />
+
+            <h:outputLabel class="edit-label">Number Of Beds</h:outputLabel>
+            <h:inputText class="edit-input" value="#{roomManagedBean.numberOfBeds}"  a:placeholder="Number of beds.."  />
+            
+            <h:outputLabel class="edit-label">Price</h:outputLabel>
+            <h:inputText class="edit-input" value="#{roomManagedBean.price}"  a:placeholder="Price.."  />
+          
+            <f:facet name="footer">
+                <h:commandButton class="edit-button" action="#{roomManagedBean.room()}" value="Add"/>
+        </f:facet>
+        </h:panelGrid>
+        </h:form>
+        </div>
+    </h:body>
+</html>
+

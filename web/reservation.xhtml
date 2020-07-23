@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Reservation</title>
+        <h:outputStylesheet library="css" name="home.css"/>
+    </h:head>
+    <h:body>
+        <h1>Hotel Reservation</h1>
+        
+        <ul>
+        <li class="home"><a href="user.xhtml">HOME</a></li>
+        <li><a href="room_information.xhtml">ROOM INFORMATION</a></li>
+        <li><a href="reservation.xhtml">RESERVATION</a></li>
+        <li><a href="index.xhtml">LOGOUT</a></li>
+      </ul>
+        <div class="container">
+            
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel class="label">First Name</h:outputLabel>
+            <h:outputLabel class="label">Last Name</h:outputLabel>
+
+            <h:inputText class="input"  a:placeholder="Your name.."  />
+            <h:inputText class="input"  a:placeholder="Your last name.."  />
+        </h:panelGrid>
+        
+    <label class="label">Document number</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your document number.."/>
+    
+    <h:panelGrid columns="3">
+        <h:outputLabel class="label">Country</h:outputLabel>
+        <h:outputLabel></h:outputLabel>
+        <h:outputLabel class="label">City</h:outputLabel>
+
+        <h:selectOneMenu class="select" value="#{addressManagedBean.idCountry}">
+            <f:selectItems value="#{addressManagedBean.allCountry}" var="country" 
+                           itemValue="#{country.id}" itemLabel="#{country.name}"/>         
+        </h:selectOneMenu>
+        
+        <h:outputLabel></h:outputLabel>
+        <h:inputText class="input" value="#{addressManagedBean.townName}" a:placeholder="City.."  />
+    </h:panelGrid>    
+    
+    <h:panelGrid columns="2">
+        <h:outputLabel class="label">Address</h:outputLabel>
+        <h:outputLabel class="label">Number</h:outputLabel>
+        
+        <h:inputText class="input" value="#{addressManagedBean.streetName}" a:placeholder="Address.."  />
+        <h:inputText  class="input" value="#{addressManagedBean.streetNumber}" a:placeholder="Number.."  />
+        
+        <h:outputLabel class="label">Check-in Date</h:outputLabel>
+        <h:outputLabel class="label">Check-out Date</h:outputLabel>
+        
+        <h:inputText class="input"  a:placeholder="mm/dd/yyyy" />
+        <h:inputText  class="input" a:placeholder="mm/dd/yyyy" />
+        
+        <h:outputLabel class="label">Number of Adults</h:outputLabel>
+        <h:outputLabel class="label">Room name</h:outputLabel>
+
+        <h:inputText class="input" a:placeholder="Number of adults.." />
+        <h:inputText class="input" a:placeholder="Room name.." />
+        
+        <h:outputLabel class="label">Beds</h:outputLabel>
+        <h:outputLabel class="label">Price</h:outputLabel>
+       
+        <h:inputText class="input"  />
+        <h:inputText class="input"  />
+        <f:facet name="footer">
+            <h:commandButton class="button" action="#{addressManagedBean.town()}" value="Submit"/>
+        </f:facet>
+    </h:panelGrid>
+    
+       
+  </h:form>
+</div>
+    </h:body>
+</html>
+
